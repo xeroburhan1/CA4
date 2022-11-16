@@ -1,0 +1,102 @@
+
+
+<div class="card">
+  <div class="bar">
+    <div class="navlogo"></div>
+    <h6 class="bartext">Xero Bank</h6>
+  </div>
+  <div class="con">
+    <h4>
+      Application for Loan
+    </h4>
+
+    <form #frm="ngForm" (ngSubmit)="onsubmit(frm)">
+
+      <b>PERSONAL INFORMATION</b>
+      <div class="form-group pt-2 ">
+
+        <input type="text" class="form-control d-inline" id="fname"  placeholder="*First name" required ngModel name="Fname" #Fname="ngModel" maxlength="10">
+        <input type="text" class="form-control d-inline" id="lname"  placeholder="Last name" ngModel name="Lname">
+        <div class="alrttext" *ngIf="Fname.touched && !Fname.valid">
+          <div *ngIf="Fname.errors?.['required']">First name is required!</div>
+          <div *ngIf="Fname.errors?.['maxlength']">Maximum 10 letters!</div>
+        </div>
+
+      </div>
+
+      <div class="form-group pt-2">
+        <input type="text" class="form-control d-inline " id="email"  placeholder="Email" ngModel name="email" email="true" #email="ngModel">
+        <input type="text" class="form-control d-inline" id="phone" placeholder="*Phone" ngModel name="phone" #phone="ngModel" required>
+        <div class="alrttext" *ngIf="phone.touched && !phone.valid">
+          <div style="padding-left:45% ;" *ngIf="phone.errors?.['required']">Phone is required!</div>
+        </div>
+        <div class="alrttext" *ngIf="email.touched && !email.valid">
+          <div>Enter a valid email!</div>
+        </div>
+      </div>
+
+      <div class="form-group pt-2 pb-4">
+        <input type="number" class="form-control d-inline" id="age" placeholder="*Age" ngModel name="age" #age="ngModel" required>
+        <div class="alrttext" *ngIf="age.touched && !age.valid">
+          <div  *ngIf="phone.errors?.['required']">Enter your age!</div>
+        </div>
+      </div>
+
+
+      <b class="mt-2">LOAN INFO</b>
+      <div class="form-group pt-2">
+        <input type="number" class="form-control d-inline " id="amoumnt"  placeholder="*Amount" ngModel name="amount" #amount="ngModel" required >
+        <input type="text" class="form-control d-inline" id="amountwords" ngModel name="amount in words" placeholder="Amount in words">
+        <div class="alrttext" *ngIf="amount.touched && !amount.valid">
+          <div *ngIf="amount.errors?.['required']">Please enter amount!</div>
+        </div>
+    </div>
+    <div class="radio pt-2 pb-4">
+
+      <label>Do You have account in this bank</label><br>
+
+      <label>
+        <input type="radio" class="radioinput" ngModel name="account" value="yes" >
+        Yes
+      </label><br>
+      <label>
+        <input class="radioinput" type="radio" ngModel name="account" value="no" >
+        No
+      </label>
+      </div>
+
+      <b class="mt-2">REASON</b>
+
+
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Reason to take loan</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option *ngFor="let rsn of reason">{{rsn.name}}</option>
+      </select>
+    </div>
+      <div class="form-group pt-2">
+        <label for="id2">*Bref your reason</label>
+        <textarea name="" id=""  class="form-control" ngModel name="bref" #bref="ngModel" required minlength="50">
+        </textarea>
+        <div class="alrttext" *ngIf="bref.touched && !bref.valid">
+          <div *ngIf="bref.errors?.['required']">Please bref your reason!</div>
+          <div *ngIf="bref.errors?.['minlength']">Minimum 50 letters!</div>
+        </div>
+    </div>
+
+    <div class="checkbox pt-4">
+      <input class="radioinput" type="checkbox" id="chkid1" ngModel name="accept condition"> I accept to give interest on return.<br>
+      <input class="radioinput"  type="checkbox" id="chkid2" ngModel name="accept interest">I accept all policy & conditions.
+      </div>
+
+      <button class="mt-4 " [disabled]="!frm.valid" >submit</button>
+
+
+    </form>
+  </div>
+  <img src="./assets/507335-PHX0DR-357.png" alt="">
+  </div>
+
+
+
+

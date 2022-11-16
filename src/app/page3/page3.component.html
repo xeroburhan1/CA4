@@ -1,0 +1,60 @@
+
+
+
+
+  <div class="card">
+    <div class="bar">
+      <div class="navlogo"></div>
+      <h6 class="bartext">Xero Bank</h6>
+    </div>
+    <div class="con">
+      <h4>
+        Application for Loan
+      </h4>
+
+      <form #frm="ngForm" (ngSubmit)="onsubmit(frm)">
+
+        <b>PERSONAL INFORMATION</b>
+        <div class="form-group">
+          <input required placeholder="First Name" type="text" ngModel id="id1" class="form.control d-block" name="V1" #V1="ngModel"
+          minlength="5"
+          maxlength="10"
+          pattern="Burhan">
+          <div class="alerts" *ngIf="V1.touched && !V1.valid">
+            <div class="alrttext" *ngIf="V1.errors?.['required']">First name is required</div>
+            <div class="alrttext" *ngIf="V1.errors?.['minlength']">Minimum 5 letters</div>
+            <div class="alrttext" *ngIf="V1.errors?.['maxlength']">Maximum 10 letters</div>
+            <div class="alrttext" *ngIf="V1.errors?.['pattern']">Not matched with pattern</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input placeholder="Last Name" id="id2" cols="20" rows="5" class="form.control d-block" ngModel name="V2" #V2="ngModel" >
+        </div> <br>
+
+        <div class="radio">
+          <label>Employment Status</label> <br>
+          <label>
+            <input type="radio" ngModel name="Employment_Status" value="Employed" >
+            employed
+          </label>
+          <label>
+            <input type="radio" ngModel name="Employment_Status" value="Student" >
+            student
+          </label>
+
+        </div> <br>
+
+        <p>{{frm.value | json}}</p>
+
+
+
+        <button class="btn btn-primary" >submit</button>
+
+
+
+      </form>
+    </div>
+    </div>
+
+

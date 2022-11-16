@@ -1,0 +1,157 @@
+
+
+.card{
+
+  background-color: #222831;
+  margin: 20px;
+  width: 95%;
+  height: 800px;
+  position: absolute;
+  border-radius: 10px 10px 0 0;
+  font-family: fredoka;
+  color: white;
+  font-size: 12px;
+
+}
+
+.bar{
+
+  background-color: #393E46;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  border-radius: 10px 10px 0 0;
+
+}
+
+.navlogo{
+  height: 25px;
+  width: 25px;
+  background-color: #00BBF0;
+  position: absolute;
+  border-radius: 10px;
+  margin:10px;
+}
+
+.con{
+  position: absolute;
+  margin: 70px;
+}
+
+.bartext{
+  font-weight: bold;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.con h3{
+  font-weight: bold;
+}
+
+.alrttext{
+  color: rgb(255, 52, 52);
+  font-size: 10px;
+  padding: 3px;
+}
+
+form{
+  margin: 10px;
+  margin-top: 20px;
+}
+
+input{
+  border-radius: 5px;
+  border: none;
+  background-color: #393E46;
+  margin-right: 10px;
+  height: 30px;
+  width: 40%;
+}
+
+::placeholder{
+  color: white;
+  padding-left: 10px;
+  opacity: 1;
+  font-size: 10px;
+}
+
+.info{
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+b{
+  letter-spacing: 2px;
+  font-size: 10px;
+  color: #00BBF0;
+}
+
+.radioinput{
+  width: auto;
+  height: auto;
+}
+
+label{
+  font-size: 12px;
+}
+
+select{
+
+  border-radius: 5px;
+  border: none;
+  background-color: #393E46;
+  margin-right: 10px;
+  height: 30px;
+  width: 40%;
+
+}
+
+option{
+
+  background-color: #393E46;
+  padding-left: 10px;
+  opacity: 1;
+  font-size: 10px;
+  color: white;
+}
+
+textarea{
+
+  border-radius: 5px;
+  border: none;
+  background-color: #393E46;
+  margin-right: 10px;
+  width: 80%;
+  height: 60px;
+
+}
+
+
+button{
+  height: 30px;
+  background-color: #00BBF0;
+  border: none;
+  border-radius: 10px;
+  color: #222831;
+  width: 25%;
+}
+
+input, select, textarea{
+  color: #ffffff;
+  font-size: 12px;
+}
+
+button:disabled{
+  background-color: #a7dae8;
+}
+
+img{
+  width: 30%;
+  margin-left: 55%;
+  margin-top: 15%;
+}
+
